@@ -13,7 +13,13 @@ const sum = (a : number, b : number) : number => {
     return a+b;
 }
 
-const isLegal2 = (user : {age : number, firstName : string, lastName : string}) : boolean =>{
+interface User{
+    age : number,
+    firstName : string,
+    lastName : string 
+}
+
+const isLegal2 = (user : User) : boolean =>{
     if(user.age >= 18) return true;
     else return false;
 }
